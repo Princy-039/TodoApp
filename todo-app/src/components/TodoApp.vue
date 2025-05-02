@@ -93,6 +93,9 @@
         });
       },
     },
+    mounted() {
+    this.fetchTodos();  // Call fetchTodos when the page loads
+  },
     methods: {
       async fetchTodos() {
         const res = await fetch('http://localhost:8083/getalltodo');
